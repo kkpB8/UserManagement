@@ -1,0 +1,335 @@
+2023-12-01 12:09:47.490 [INFO]  UserManagement [main] c.U.M.Service.ServiceApplication                   - Starting ServiceApplication using Java 18.0.2-ea with PID 45099 (/home/ganesh/mocroWare/Service/target/classes started by ganesh in /home/ganesh/mocroWare/Service)
+2023-12-01 12:09:47.492 [INFO]  UserManagement [main] c.U.M.Service.ServiceApplication                   - The following 1 profile is active: "local"
+2023-12-01 12:09:48.174 [INFO]  UserManagement [main] o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 12:09:48.190 [INFO]  UserManagement [main] o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2023-12-01 12:09:48.726 [INFO]  UserManagement [main] o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port 9092 (http)
+2023-12-01 12:09:48.732 [INFO]  UserManagement [main] o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2023-12-01 12:09:48.732 [INFO]  UserManagement [main] org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 12:09:48.766 [INFO]  UserManagement [main] o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2023-12-01 12:09:48.766 [INFO]  UserManagement [main] o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 1240 ms
+2023-12-01 12:09:49.054 [INFO]  UserManagement [main] com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Starting...
+2023-12-01 12:09:49.295 [INFO]  UserManagement [main] com.zaxxer.hikari.pool.HikariPool                  - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@697a92af
+2023-12-01 12:09:49.296 [INFO]  UserManagement [main] com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Start completed.
+2023-12-01 12:09:49.329 [INFO]  UserManagement [main] o.hibernate.jpa.internal.util.LogHelper            - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 12:09:49.366 [INFO]  UserManagement [main] org.hibernate.Version                              - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 12:09:49.391 [INFO]  UserManagement [main] o.h.c.internal.RegionFactoryInitiator              - HHH000026: Second-level cache disabled
+2023-12-01 12:09:49.566 [INFO]  UserManagement [main] o.s.o.j.p.SpringPersistenceUnitInfo                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 12:09:49.837 [INFO]  UserManagement [main] o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 12:09:49.841 [INFO]  UserManagement [main] o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 12:09:49.852 [INFO]  UserManagement [main] c.U.M.Service.ServiceApplication                   - labkjjfadkfhajfnsaodjasbkjdh
+2023-12-01 12:09:49.909 [WARN]  UserManagement [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 12:09:50.827 [INFO]  UserManagement [main] o.s.b.a.e.web.EndpointLinksResolver                - Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-12-01 12:09:50.922 [INFO]  UserManagement [main] o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port 9092 (http) with context path ''
+2023-12-01 12:09:50.937 [INFO]  UserManagement [main] c.U.M.Service.ServiceApplication                   - Started ServiceApplication in 3.819 seconds (process running for 4.493)
+2023-12-01 12:09:51.402 [INFO]  UserManagement [RMI TCP Connection(1)-192.168.11.224] o.s.a.r.c.CachingConnectionFactory                 - Attempting to connect to: [localhost:5672]
+2023-12-01 12:09:51.402 [INFO]  UserManagement [RMI TCP Connection(2)-192.168.11.224] o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 12:09:51.405 [WARN]  UserManagement [RMI TCP Connection(1)-192.168.11.224] o.s.b.actuate.amqp.RabbitHealthIndicator           - Rabbit health check failed
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:594)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:711)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:257)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2225)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2198)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2178)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:82)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:76)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:66)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:811)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:539)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:61)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1249)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1198)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:632)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:607)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:557)
+	... 47 common frames omitted
+2023-12-01 12:12:26.456 [INFO]  UserManagement [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 12:12:26.458 [INFO]  UserManagement [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Shutdown initiated...
+2023-12-01 12:12:26.464 [INFO]  UserManagement [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Shutdown completed.
+2023-12-01 12:12:29.862 [INFO]  UserManagement [main] c.U.M.Service.ServiceApplication                   - Starting ServiceApplication using Java 18.0.2-ea with PID 45697 (/home/ganesh/mocroWare/Service/target/classes started by ganesh in /home/ganesh/mocroWare/Service)
+2023-12-01 12:12:29.863 [INFO]  UserManagement [main] c.U.M.Service.ServiceApplication                   - The following 1 profile is active: "local"
+2023-12-01 12:12:30.571 [INFO]  UserManagement [main] o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 12:12:30.586 [INFO]  UserManagement [main] o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2023-12-01 12:12:31.128 [INFO]  UserManagement [main] o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port 9092 (http)
+2023-12-01 12:12:31.134 [INFO]  UserManagement [main] o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2023-12-01 12:12:31.134 [INFO]  UserManagement [main] org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 12:12:31.168 [INFO]  UserManagement [main] o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2023-12-01 12:12:31.168 [INFO]  UserManagement [main] o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 1269 ms
+2023-12-01 12:12:31.431 [INFO]  UserManagement [main] com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Starting...
+2023-12-01 12:12:31.675 [INFO]  UserManagement [main] com.zaxxer.hikari.pool.HikariPool                  - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@52b30054
+2023-12-01 12:12:31.676 [INFO]  UserManagement [main] com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Start completed.
+2023-12-01 12:12:31.707 [INFO]  UserManagement [main] o.hibernate.jpa.internal.util.LogHelper            - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 12:12:31.742 [INFO]  UserManagement [main] org.hibernate.Version                              - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 12:12:31.765 [INFO]  UserManagement [main] o.h.c.internal.RegionFactoryInitiator              - HHH000026: Second-level cache disabled
+2023-12-01 12:12:31.941 [INFO]  UserManagement [main] o.s.o.j.p.SpringPersistenceUnitInfo                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 12:12:32.227 [INFO]  UserManagement [main] o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 12:12:32.231 [INFO]  UserManagement [main] o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 12:12:32.244 [INFO]  UserManagement [main] c.U.M.Service.ServiceApplication                   - labkjjfadkfhajfnsaodjasbkjdh
+2023-12-01 12:12:32.302 [WARN]  UserManagement [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 12:12:33.214 [INFO]  UserManagement [main] o.s.b.a.e.web.EndpointLinksResolver                - Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-12-01 12:12:33.304 [INFO]  UserManagement [main] o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port 9092 (http) with context path ''
+2023-12-01 12:12:33.316 [INFO]  UserManagement [main] c.U.M.Service.ServiceApplication                   - Started ServiceApplication in 3.845 seconds (process running for 4.499)
+2023-12-01 12:12:33.676 [INFO]  UserManagement [RMI TCP Connection(1)-192.168.11.224] o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 12:12:33.676 [INFO]  UserManagement [RMI TCP Connection(2)-192.168.11.224] o.s.a.r.c.CachingConnectionFactory                 - Attempting to connect to: [localhost:5672]
+2023-12-01 12:12:33.680 [WARN]  UserManagement [RMI TCP Connection(2)-192.168.11.224] o.s.b.actuate.amqp.RabbitHealthIndicator           - Rabbit health check failed
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:594)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:711)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:257)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2225)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2198)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2178)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:82)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:76)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:66)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:811)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:539)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:61)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1249)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1198)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:632)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:607)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:557)
+	... 47 common frames omitted
+2023-12-01 12:13:23.549 [INFO]  UserManagement [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 12:13:23.551 [INFO]  UserManagement [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Shutdown initiated...
+2023-12-01 12:13:23.558 [INFO]  UserManagement [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Shutdown completed.
+2023-12-01 12:13:26.064 [ERROR]  UserManagement [main] o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'logging.level.root' to org.springframework.boot.logging.LogLevel:
+
+    Property: logging.level.root
+    Value: "*"
+    Origin: class path resource [application-local.properties] - 19:20
+    Reason: failed to convert java.lang.String to org.springframework.boot.logging.LogLevel (caused by java.lang.IllegalArgumentException: No enum constant org.springframework.boot.logging.LogLevel.*)
+
+Action:
+
+Update your application's configuration. The following values are valid:
+
+    DEBUG
+    ERROR
+    FATAL
+    INFO
+    OFF
+    TRACE
+    WARN
+
+2023-12-01 12:13:48.117 [ERROR]  UserManagement [main] o.s.b.d.LoggingFailureAnalysisReporter             - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'logging.level.com.teqmonic' to org.springframework.boot.logging.LogLevel:
+
+    Property: logging.level.com.teqmonic
+    Value: "*"
+    Origin: class path resource [application-local.properties] - 21:28
+    Reason: failed to convert java.lang.String to org.springframework.boot.logging.LogLevel (caused by java.lang.IllegalArgumentException: No enum constant org.springframework.boot.logging.LogLevel.*)
+
+Action:
+
+Update your application's configuration. The following values are valid:
+
+    DEBUG
+    ERROR
+    FATAL
+    INFO
+    OFF
+    TRACE
+    WARN
+
+2023-12-01 12:13:57.118 [INFO]  UserManagement [main] c.U.M.Service.ServiceApplication                   - Starting ServiceApplication using Java 18.0.2-ea with PID 46212 (/home/ganesh/mocroWare/Service/target/classes started by ganesh in /home/ganesh/mocroWare/Service)
+2023-12-01 12:13:57.119 [INFO]  UserManagement [main] c.U.M.Service.ServiceApplication                   - The following 1 profile is active: "local"
+2023-12-01 12:13:57.834 [INFO]  UserManagement [main] o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 12:13:57.848 [INFO]  UserManagement [main] o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2023-12-01 12:13:58.398 [INFO]  UserManagement [main] o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port 9092 (http)
+2023-12-01 12:13:58.405 [INFO]  UserManagement [main] o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2023-12-01 12:13:58.405 [INFO]  UserManagement [main] org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 12:13:58.444 [INFO]  UserManagement [main] o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2023-12-01 12:13:58.444 [INFO]  UserManagement [main] o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 1290 ms
+2023-12-01 12:13:58.707 [INFO]  UserManagement [main] com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Starting...
+2023-12-01 12:13:58.943 [INFO]  UserManagement [main] com.zaxxer.hikari.pool.HikariPool                  - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7f6b57f2
+2023-12-01 12:13:58.945 [INFO]  UserManagement [main] com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Start completed.
+2023-12-01 12:13:58.976 [INFO]  UserManagement [main] o.hibernate.jpa.internal.util.LogHelper            - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 12:13:59.011 [INFO]  UserManagement [main] org.hibernate.Version                              - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 12:13:59.034 [INFO]  UserManagement [main] o.h.c.internal.RegionFactoryInitiator              - HHH000026: Second-level cache disabled
+2023-12-01 12:13:59.208 [INFO]  UserManagement [main] o.s.o.j.p.SpringPersistenceUnitInfo                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 12:13:59.496 [INFO]  UserManagement [main] o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 12:13:59.499 [INFO]  UserManagement [main] o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 12:13:59.510 [INFO]  UserManagement [main] c.U.M.Service.ServiceApplication                   - labkjjfadkfhajfnsaodjasbkjdh
+2023-12-01 12:13:59.566 [WARN]  UserManagement [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 12:14:00.470 [INFO]  UserManagement [main] o.s.b.a.e.web.EndpointLinksResolver                - Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-12-01 12:14:00.564 [INFO]  UserManagement [main] o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port 9092 (http) with context path ''
+2023-12-01 12:14:00.578 [INFO]  UserManagement [main] c.U.M.Service.ServiceApplication                   - Started ServiceApplication in 3.847 seconds (process running for 4.453)
+2023-12-01 12:14:01.035 [INFO]  UserManagement [RMI TCP Connection(3)-192.168.11.224] o.s.a.r.c.CachingConnectionFactory                 - Attempting to connect to: [localhost:5672]
+2023-12-01 12:14:01.036 [INFO]  UserManagement [RMI TCP Connection(2)-192.168.11.224] o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 12:14:01.036 [INFO]  UserManagement [RMI TCP Connection(2)-192.168.11.224] o.s.web.servlet.DispatcherServlet                  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 12:14:01.037 [INFO]  UserManagement [RMI TCP Connection(2)-192.168.11.224] o.s.web.servlet.DispatcherServlet                  - Completed initialization in 1 ms
+2023-12-01 12:14:01.038 [WARN]  UserManagement [RMI TCP Connection(3)-192.168.11.224] o.s.b.actuate.amqp.RabbitHealthIndicator           - Rabbit health check failed
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:594)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:711)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:257)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2225)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2198)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2178)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:82)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:76)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:66)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:811)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:539)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:61)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1249)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1198)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:632)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:607)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:557)
+	... 47 common frames omitted
+2023-12-01 12:25:22.681 [INFO]  UserManagement [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 12:25:22.683 [INFO]  UserManagement [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Shutdown initiated...
+2023-12-01 12:25:22.690 [INFO]  UserManagement [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Shutdown completed.

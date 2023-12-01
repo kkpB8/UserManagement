@@ -1,7 +1,7 @@
 package com.User.Management.Service.Exception;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 
 
@@ -9,12 +9,13 @@ import org.springframework.http.HttpStatus;
  * This will the exception we will use For all of them
  */
 @Data
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class GlobalException  extends Exception{
 
+    private String function;
     private Integer status;
     private String message;
-    private Object data;
     private HttpStatus httpStatus;
+
 
 }

@@ -39,4 +39,11 @@ public class UserEntity {
     @JsonIgnore
     @Column(name = "salt")
     private String salt;
+
+    @Column(name = "is_active")
+    private boolean isActive;
+
+    @Column(name = "refresh_token")
+    private String refreshToken;
+
 }

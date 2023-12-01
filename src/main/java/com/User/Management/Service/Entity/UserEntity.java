@@ -6,6 +6,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Table(name = "users")
 @Data
@@ -45,5 +47,12 @@ public class UserEntity {
 
     @Column(name = "refresh_token")
     private String refreshToken;
+
+    @ManyToMany
+    @JoinTable(
+            name = "user_role",
+            joinColumns = @JoinColumn(name = "urser_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    public List<Role> roles;
 
 }

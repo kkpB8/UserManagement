@@ -12,6 +12,7 @@ public class CommonString {
 
     public static final String save="/save";
 
+    public static final String Invalid_UserName= "Invalid UserName";
 
 
 
